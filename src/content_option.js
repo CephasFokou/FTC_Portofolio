@@ -1,119 +1,124 @@
 const logotext = "{#FTC}";
 const meta = {
     title: "Cephas Fokou",
-    description: "I'm Cephas Fokou, a technologist and cybersecurity enthuist.",
+    description: "Digital Banking Manager / Product Manager / Team Lead — pilotage opérationnel, continuité de service, gestion de projets bancaires digitaux.",
 };
 
 const introdata = {
     title: "Hi, I'm {Cephas Fokou}",
     animated: {
-        first: "UI | UX",
-        second: "Front End Dev",
-        third: "Graphic Designer",
-        fourth: "Programmer",
-        fifth: "Team Lead",
-        sixth: "Analyst",
+        first: "Digital Banking Manager",
+        second: "Product Manager",
+        third: "Team Lead",
+        fourth: "Pilotage applicatif (RUN)",
+        fifth: "Gestion de projet",
+        sixth: "Agile / Scrum",
         // add more if you'd like but make sure to update /src/pages/home/index.js Line 29
     },
-    description: "Despite the fact UI|UX is what i prefer, i can also work on project as a FrontEnd Developper; Team lead manager or even deploying cloud systems infracstructures.",
-    your_img_url: require("./assets/images/Ftc_sans_fond.png"),
+    description:
+        "Digital Banking Manager orienté continuité de service et pilotage opérationnel de produits bancaires digitaux. Supervision d’équipes, gestion de projets complexes et gestion de situations critiques.",
+    your_img_url: require("./assets/images/ftc-1.jpeg"),
 };
 
 const dataabout = {
-    title: "Who am I?",
-    aboutme: "I am Cephas Fokou, Web|Mobile developper from Yaounde|Cameroon. Since 2017 i have worked on serval projects like web site designing, web application creation, customization of digital platform... Despite the fact UI|UX is what i prefer, i can also work on project as a FrontEnd Developper; Team lead manager or even deploying cloud systems infracstructures.",
+    title: "Qui suis-je ?",
+    aboutme:
+        "Digital Banking Manager orienté continuité de service et pilotage opérationnel de produits bancaires digitaux (Online Banking, applications fintech). Je supervise une équipe de 20 développeurs et je gère des projets complexes dans le secteur bancaire. J’ai également une expérience en gestion de situations critiques, mise en place de plannings et roadmaps. Habitué aux environnements exigeants et multi-pays, avec un sens élevé de la rigueur, de la discrétion et du service.",
 };
 const worktimeline = [{
-        jobtitle: "Product manager",
-        where: "PKFRC",
-        date: "2023",
+        jobtitle: "Digital Banking Manager / Team Lead / Product Manager",
+        where: "Centre de Recherche PKFokam (PKFRC) / Afriland First Bank",
+        date: "05/2022 – Actuel",
     },
     {
-        jobtitle: "Front End Dev",
-        where: "PKFRC",
-        date: "2022",
+        jobtitle: "Team Lead & Responsable IT",
+        where: "SEINOVA SARL",
+        date: "01/2022 – 05/2022",
     },
     {
-        jobtitle: "IT Officer",
-        where: "SEINOVA",
-        date: "2021",
+        jobtitle: "Team Lead / Product Manager / Développeur Full Stack",
+        where: "MaSolution SARL",
+        date: "06/2020 – 01/2022",
     },
     {
-        jobtitle: "IT Officer",
-        where: "MaSolution",
-        date: "2020",
-    },
-    {
-        jobtitle: "Web developper",
-        where: "Visiocare Academy",
-        date: "2018",
-    },
-    {
-        jobtitle: "Graphic Designer",
-        where: "Eden Africa",
-        date: "2018",
-    },
-    {
-        jobtitle: "IT Assistant",
-        where: "GLOTELHO",
-        date: "2017",
+        jobtitle: "Web Designer & Assistant administratif",
+        where: "EDEN AFRICA",
+        date: "01/2019 – 06/2020",
     },
 ];
 
 const skills = [{
-        name: "Figma",
-    },
-    
-    {
-        name: "AdobeXD",
-    },
-    
-    {
-        name: "HTML5, CSS3, JavaScript",
-    },
-    {
-        name: "Boostrapp",
-    },
-    
-    {
-        name: "Jquery",
-    },
+    name: "Pilotage applicatif",
+}, {
+    name: "Coordination RUN",
+}, {
+    name: "Suivi opérationnel",
+}, {
+    name: "Priorisation",
+}, {
+    name: "Reporting",
+}, {
+    name: "Amélioration continue",
+}, {
+    name: "Gestion de crise",
+}, {
+    name: "Gestion d’équipe",
+}, {
+    name: "Leadership / Coaching",
+}, {
+    name: "Gestion de projet",
+}, {
+    name: "Planification / Roadmap",
+}, {
+    name: "Agile / Scrum",
+}, {
+    name: "Docker",
+}, {
+    name: "Azure",
+}, {
+    name: "ReactJs",
+}, {
+    name: "Angular",
+}, {
+    name: "React Native",
+}, {
+    name: "HTML5 / CSS3 / JavaScript",
+}, {
+    name: "PostgreSQL / MySQL",
+}, {
+    name: "Git",
+}, {
+    name: "Figma",
+}, {
+    name: "Adobe XD",
+}, {
+    name: "WordPress",
+}, {
+    name: "Excel",
+}, {
+    name: "ChatGPT",
+},
+];
 
-    {
-        name: "Angular",
+const education = [{
+        title: "MBA International",
+        where: "UNICAF",
+        date: "En cours",
     },
+    {
+        title: "Licence Réseau & Télécom",
+        where: "Institut Universitaire de Technologie",
+        date: "",
+    },
+];
 
-    {
-        name: "ReactJs",
-    },
-
-    {
-        name: "React Native",
-    },
-
-    {
-        name: "Java, PHP",
+const languages = [{
+        name: "Français",
+        level: "C2",
     },
     {
-        name: "PostgreSql, MySQL",
-    },
-    {
-        name: "Scrum",
-    },
-    {
-        name: "Git",
-    },
-    {
-        name: "GitHub",
-    },
-    {
-        name: "GitLab",
-    },
-    {
-        name: "BitBucket",
-    },
-    {
-        name: "WordPress",
+        name: "Anglais",
+        level: "B2",
     },
 ];
 
@@ -265,12 +270,19 @@ const dataportfolio = [{
 
 const contactConfig = {
     YOUR_EMAIL: "cephasfokou@gmail.com",
+    YOUR_PHONE: "+237 695 963 860",
+    YOUR_ADDRESS: "Rue 5B577, Yaoundé, Cameroun",
     description: "Looking forward to hearing from you!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_0g0wl08",
     YOUR_TEMPLATE_ID: "template_h7p8ht5",
     YOUR_USER_ID: "slafKVy_zYtFtzv99",
+};
+
+const documents = {
+    cv: require("./assets/Cephas_Fokou_CV_5.pdf"),
+    coverLetter: require("./assets/Lettre_Motivation_Cephas_FOKOU_AFG_Gestionnaire_Applicatifs.pdf.pdf"),
 };
 
 const socialprofils = {
@@ -284,8 +296,11 @@ export {
     dataportfolio,
     worktimeline,
     skills,
+    education,
+    languages,
     introdata,
     contactConfig,
+    documents,
     socialprofils,
     logotext,
 };

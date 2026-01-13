@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logotext ,socialprofils } from "../content_option";
+import { logotext, socialprofils, documents } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 
 const Headermain = () => {
@@ -45,6 +45,21 @@ const Headermain = () => {
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
+                  </li>
+                  <li className="menu_item">
+                    <a onClick={handleToggle} href={documents.cv} className="my-3" download>
+                      CV
+                    </a>
+                  </li>
+                  <li className="menu_item">
+                    <a
+                      onClick={handleToggle}
+                      href={documents.coverLetter}
+                      className="my-3"
+                      download
+                    >
+                      Lettre
+                    </a>
                   </li>
                 </ul>
               </div>

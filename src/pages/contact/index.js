@@ -4,7 +4,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig, documents } from "../../content_option";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -98,6 +98,28 @@ export const ContactUs = () => {
               <strong>Email:</strong>{" "}
               <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
                 {contactConfig.YOUR_EMAIL}
+              </a>
+              <br />
+              <strong>Téléphone:</strong>{" "}
+              <a
+                href={`tel:${(contactConfig.YOUR_PHONE || "").replace(
+                  /\s/g,
+                  ""
+                )}`}
+              >
+                {contactConfig.YOUR_PHONE}
+              </a>
+              <br />
+              <strong>Adresse:</strong> {contactConfig.YOUR_ADDRESS}
+              <br />
+              <strong>CV:</strong>{" "}
+              <a href={documents.cv} download>
+                Télécharger
+              </a>
+              <br />
+              <strong>Lettre:</strong>{" "}
+              <a href={documents.coverLetter} download>
+                Télécharger
               </a>
               <br />
             </address>

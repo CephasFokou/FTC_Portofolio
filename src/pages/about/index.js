@@ -7,6 +7,9 @@ import {
   meta,
   worktimeline,
   skills,
+  education,
+  languages,
+  documents,
 } from "../../content_option";
 
 export const About = () => {
@@ -54,6 +57,46 @@ export const About = () => {
             </table>
           </Col>
         </Row>
+        <Row className=" sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Education</h3>
+          </Col>
+          <Col lg="7">
+            <table className="table caption-top">
+              <tbody>
+                {education.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope="row">{data.title}</th>
+                      <td>{data.where}</td>
+                      <td>{data.date}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </Col>
+        </Row>
+        <Row className=" sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Languages</h3>
+          </Col>
+          <Col lg="7">
+            <table className="table caption-top">
+              <tbody>
+                {languages.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope="row">{data.name}</th>
+                      <td>{data.level}</td>
+                      <td></td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </Col>
+        </Row>
         <Row className="sec_sp">
           <Col lg="5">
             <h3 className="color_sec py-4">Skills</h3>
@@ -70,6 +113,25 @@ export const About = () => {
                 </div>
               );
             })}
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Documents</h3>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <div>
+              <p className="mb-2">
+                <a href={documents.cv} download>
+                  Télécharger mon CV
+                </a>
+              </p>
+              <p className="mb-0">
+                <a href={documents.coverLetter} download>
+                  Télécharger ma lettre de motivation
+                </a>
+              </p>
+            </div>
           </Col>
         </Row>
       </Container>
