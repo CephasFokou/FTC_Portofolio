@@ -378,7 +378,7 @@ const experiences = [{
             src: require("./assets/images/Dashboard - Service Financier.png"),
             alt: "Illustration projet web",
         },
-        video: "https://youtu.be/CPEULVjROzE?si=qScOPKnUsd3x1wbw",
+        video: "https://youtu.be/CPEULVjROzE?si=Xld0jd7QQBmPZPAt",
     },
     {
         role: "Team Lead / Product Manager / Développeur Full Stack",
@@ -583,6 +583,7 @@ const experiences_en = [{
             "Set weekly objectives and ensured execution follow‑up.",
         ],
         media: experiences[1].media,
+        video: experiences[1].video,
     },
     {
         role: "Team Lead / Product Manager / Full‑Stack Developer",
@@ -597,6 +598,7 @@ const experiences_en = [{
             "Quality and value‑driven delivery.",
         ],
         media: experiences[2].media,
+        video: experiences[2].video,
     },
     {
         role: "Web Designer & Administrative Assistant",
@@ -610,6 +612,7 @@ const experiences_en = [{
             "Prepared presentations and communication materials.",
         ],
         media: experiences[3].media,
+        video: experiences[3].video,
     },
 ];
 
