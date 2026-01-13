@@ -35,6 +35,14 @@
     z-index: 1000;
 }
 
+.lang_toggle {
+    min-width: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .nav_ac:hover {
     color: var(--text-color-2);
 }

@@ -5,7 +5,7 @@ const meta = {
 };
 
 const introdata = {
-    title: "Hi, I'm {Cephas Fokou}",
+    title: "Bonjour, je suis {Cephas Fokou}",
     animated: {
         first: "Digital Banking Manager",
         second: "Product Manager",
@@ -17,7 +17,7 @@ const introdata = {
     },
     description:
         "Digital Banking Manager orienté continuité de service et pilotage opérationnel de produits bancaires digitaux. Supervision d’équipes, gestion de projets complexes et gestion de situations critiques.",
-    your_img_url: require("./assets/images/ftc-1.jpeg"),
+    your_img_url: require("./assets/images/ftc-2.jpg"),
 };
 
 const dataabout = {
@@ -98,6 +98,63 @@ const skills = [{
 }, {
     name: "ChatGPT",
 },
+];
+
+const skillsGroups = [{
+        title: "Pilotage & Delivery",
+        items: [
+            "Pilotage applicatif",
+            "Coordination RUN",
+            "Suivi opérationnel",
+            "Priorisation",
+            "Reporting",
+            "Amélioration continue",
+            "Arbitrage",
+            "Suivi d’actions correctives",
+            "Animation de comités",
+        ],
+    },
+    {
+        title: "Management",
+        items: [
+            "Gestion d’équipe",
+            "Leadership",
+            "Coaching",
+            "Formation des équipes",
+            "Communication structurée",
+            "Travail avec des équipes multiculturelles",
+            "Partenaires externes",
+        ],
+    },
+    {
+        title: "Gestion de projet",
+        items: [
+            "Gestion de projet",
+            "Planification / Roadmap",
+            "Coordination",
+            "Suivi des livrables",
+            "Agile / Scrum",
+            "Gestion de crise",
+        ],
+    },
+    {
+        title: "Tech & Outils",
+        items: [
+            "Docker",
+            "Azure",
+            "ReactJs",
+            "Angular",
+            "React Native",
+            "HTML5 / CSS3 / JavaScript",
+            "PostgreSQL / MySQL",
+            "Git",
+            "Figma",
+            "Adobe XD",
+            "WordPress",
+            "Excel",
+            "ChatGPT",
+        ],
+    },
 ];
 
 const education = [{
@@ -272,7 +329,7 @@ const contactConfig = {
     YOUR_EMAIL: "cephasfokou@gmail.com",
     YOUR_PHONE: "+237 695 963 860",
     YOUR_ADDRESS: "Rue 5B577, Yaoundé, Cameroun",
-    description: "Looking forward to hearing from you!",
+    description: "Au plaisir d’échanger avec vous.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_0g0wl08",
@@ -285,22 +342,325 @@ const documents = {
     coverLetter: require("./assets/Lettre_Motivation_Cephas_FOKOU_AFG_Gestionnaire_Applicatifs.pdf.pdf"),
 };
 
+const experiences = [{
+        role: "Digital Banking Manager / Team Lead / Product Manager",
+        company: "Afriland First Bank (via Centre de Recherche PKFokam / PKFRC)",
+        location: "Yaoundé, Cameroun",
+        period: "05/2022 – Actuel",
+        summary: "Pilotage opérationnel de produits bancaires digitaux (Online Banking, application fintech), continuité de service, coordination multi-équipes et gestion de situations critiques.",
+        highlights: [
+            "Supervision d’une équipe de 20 développeurs (Backend & Frontend).",
+            "Gestion de projets complexes multifiliales (Online Banking, site web AFB, application fintech SARA).",
+            "Coordination des parties prenantes et arbitrages (recette/validation, priorisation, reporting).",
+            "Mise en place de roadmaps trimestrielles/annuelles et suivi des livrables.",
+            "Gestion de crise avec des clients étrangers et pilotage d’actions correctives.",
+        ],
+        media: {
+            type: "image",
+            src: require("./assets/images/ebk-pub.jpg"),
+            alt: "Illustration Online Banking",
+        },
+        video: "https://youtu.be/uxlOvuYc9k0?si=ZuiZWj6XfUm_-u_2",
+    },
+    {
+        role: "Team Lead & Responsable IT",
+        company: "SEINOVA SARL",
+        location: "Yaoundé, Cameroun",
+        period: "01/2022 – 05/2022",
+        summary: "Encadrement et coordination technique, organisation de la delivery, suivi opérationnel et accompagnement des équipes.",
+        highlights: [
+            "Organisation et coordination des équipes et des interventions.",
+            "Planification, communication et reporting d’activités.",
+            "Mise en place d’objectifs hebdomadaires et suivi d’exécution.",
+        ],
+        media: {
+            type: "image",
+            src: require("./assets/images/Dashboard - Service Financier.png"),
+            alt: "Illustration projet web",
+        },
+        video: "https://youtu.be/CPEULVjROzE?si=qScOPKnUsd3x1wbw",
+    },
+    {
+        role: "Team Lead / Product Manager / Développeur Full Stack",
+        company: "MaSolution SARL",
+        location: "Yaoundé, Cameroun",
+        period: "06/2020 – 01/2022",
+        summary: "Pilotage de projets web et mobile, de l’analyse à la mise en production, avec un focus satisfaction client et respect des délais.",
+        highlights: [
+            "Du développement à la mise en exploitation d’applications web et mobile.",
+            "Analyse, conception et planification des objectifs à atteindre.",
+            "Livraison orientée qualité, délais et valeur métier.",
+        ],
+        media: {
+            type: "image",
+            src: require("./assets/images/1- FODEC WireFrame - Accueil.jpg"),
+            alt: "Illustration application web",
+        },
+    },
+    {
+        role: "Web Designer & Assistant administratif",
+        company: "EDEN AFRICA",
+        location: "Yaoundé, Cameroun",
+        period: "01/2019 – 06/2020",
+        summary: "Conception et réalisation de supports / interfaces, accompagnement administratif et communication.",
+        highlights: [
+            "Conception UI (maquettes) et production de supports.",
+            "Préparation de réunions de présentation et supports de communication.",
+        ],
+        media: {
+            type: "image",
+            src: require("./assets/images/Afb website template.jpg"),
+            alt: "Illustration design web",
+        },
+    },
+];
+
 const socialprofils = {
     github: "https://github.com/CephasFokou",
     linkedin: "https://www.linkedin.com/in/cephas-fokou-a8443a125/",
     youtube: "https://www.youtube.com/@cephasfokou3005",
 };
-export {
-    meta,
-    dataabout,
-    dataportfolio,
-    worktimeline,
-    skills,
-    education,
-    languages,
-    introdata,
-    contactConfig,
-    documents,
-    socialprofils,
-    logotext,
+
+const meta_en = {
+    title: "Cephas Fokou",
+    description: "Digital Banking Manager / Product Manager / Team Lead — operations, service continuity, and delivery of digital banking products.",
 };
+
+const introdata_en = {
+    title: "Hi, I'm {Cephas Fokou}",
+    animated: {
+        first: "Digital Banking Manager",
+        second: "Product Manager",
+        third: "Team Lead",
+        fourth: "Application operations (RUN)",
+        fifth: "Project management",
+        sixth: "Agile / Scrum",
+    },
+    description:
+        "Digital Banking Manager focused on service continuity and operational delivery of digital banking products. Team leadership, complex project delivery, and critical incident management.",
+    your_img_url: introdata.your_img_url,
+};
+
+const dataabout_en = {
+    title: "Who am I?",
+    aboutme:
+        "Digital Banking Manager focused on service continuity and operational delivery of digital banking products (Online Banking, fintech applications). I lead a team of 20 developers and deliver complex projects in the banking sector. I also have experience managing critical situations, building plans and roadmaps. Used to demanding, multi-country environments with a strong sense of rigor, discretion and service.",
+};
+
+const worktimeline_en = [{
+        jobtitle: "Digital Banking Manager / Team Lead / Product Manager",
+        where: "PKFokam Research Center (PKFRC) / Afriland First Bank",
+        date: "05/2022 – Present",
+    },
+    {
+        jobtitle: "Team Lead & IT Lead",
+        where: "SEINOVA SARL",
+        date: "01/2022 – 05/2022",
+    },
+    {
+        jobtitle: "Team Lead / Product Manager / Full‑Stack Developer",
+        where: "MaSolution SARL",
+        date: "06/2020 – 01/2022",
+    },
+    {
+        jobtitle: "Web Designer & Administrative Assistant",
+        where: "EDEN AFRICA",
+        date: "01/2019 – 06/2020",
+    },
+];
+
+const skillsGroups_en = [{
+        title: "Operations & Delivery",
+        items: [
+            "Application operations",
+            "RUN coordination",
+            "Operational follow‑up",
+            "Prioritization",
+            "Reporting",
+            "Continuous improvement",
+            "Arbitration",
+            "Corrective actions follow‑up",
+            "Steering committees facilitation",
+        ],
+    },
+    {
+        title: "Leadership",
+        items: [
+            "Team management",
+            "Leadership",
+            "Coaching",
+            "Team training",
+            "Structured communication",
+            "Multicultural collaboration",
+            "External partners",
+        ],
+    },
+    {
+        title: "Project Management",
+        items: [
+            "Project management",
+            "Planning / Roadmap",
+            "Coordination",
+            "Deliverables tracking",
+            "Agile / Scrum",
+            "Incident / crisis management",
+        ],
+    },
+    {
+        title: "Tech & Tools",
+        items: [
+            "Docker",
+            "Azure",
+            "React",
+            "Angular",
+            "React Native",
+            "HTML / CSS / JavaScript",
+            "PostgreSQL / MySQL",
+            "Git",
+            "Figma",
+            "Adobe XD",
+            "WordPress",
+            "Excel",
+            "ChatGPT",
+        ],
+    },
+];
+
+const education_en = [{
+        title: "MBA International",
+        where: "UNICAF",
+        date: "In progress",
+    },
+    {
+        title: "BSc Network & Telecommunications",
+        where: "University Institute of Technology",
+        date: "",
+    },
+];
+
+const languages_en = [{
+        name: "French",
+        level: "Fluent (C2)",
+    },
+    {
+        name: "English",
+        level: "Upper‑intermediate (B2)",
+    },
+];
+
+const contactConfig_en = {
+    ...contactConfig,
+    description: "Looking forward to hearing from you!",
+};
+
+const experiences_en = [{
+        role: "Digital Banking Manager / Team Lead / Product Manager",
+        company: "Afriland First Bank (via PKFokam Research Center / PKFRC)",
+        location: "Yaoundé, Cameroon",
+        period: "05/2022 – Present",
+        summary:
+            "Operational delivery of digital banking products (Online Banking, fintech apps), service continuity, multi‑team coordination and critical incident management.",
+        highlights: [
+            "Led a team of 20 developers (Backend & Frontend).",
+            "Delivered complex multi‑subsidiary projects (Online Banking, AFB website, SARA fintech app).",
+            "Stakeholder coordination and governance (UAT, prioritization, reporting).",
+            "Set up quarterly/annual roadmaps and tracked delivery.",
+            "Handled critical incidents with international clients and drove corrective actions.",
+        ],
+        media: experiences[0].media,
+        video: experiences[0].video,
+    },
+    {
+        role: "Team Lead & IT Lead",
+        company: "SEINOVA SARL",
+        location: "Yaoundé, Cameroon",
+        period: "01/2022 – 05/2022",
+        summary:
+            "Team leadership and technical coordination, delivery organization, operational follow‑up and team support.",
+        highlights: [
+            "Coordinated teams and interventions.",
+            "Planning, communication and activity reporting.",
+            "Set weekly objectives and ensured execution follow‑up.",
+        ],
+        media: experiences[1].media,
+    },
+    {
+        role: "Team Lead / Product Manager / Full‑Stack Developer",
+        company: "MaSolution SARL",
+        location: "Yaoundé, Cameroon",
+        period: "06/2020 – 01/2022",
+        summary:
+            "Delivery of web and mobile projects from analysis to production, with a focus on client satisfaction and timelines.",
+        highlights: [
+            "Delivered web & mobile applications end‑to‑end.",
+            "Analysis, design and weekly planning of objectives.",
+            "Quality and value‑driven delivery.",
+        ],
+        media: experiences[2].media,
+    },
+    {
+        role: "Web Designer & Administrative Assistant",
+        company: "EDEN AFRICA",
+        location: "Yaoundé, Cameroon",
+        period: "01/2019 – 06/2020",
+        summary:
+            "UI and creative work, production of communication assets, and administrative support.",
+        highlights: [
+            "Designed UI mockups and produced creative assets.",
+            "Prepared presentations and communication materials.",
+        ],
+        media: experiences[3].media,
+    },
+];
+
+const dataportfolio_fr_descriptions = [
+    "De la maquette Figma à l’implémentation, e‑Banking est une application web bancaire moderne pour Afriland First Bank.",
+    "Si tu te disais “avant c’était juste un site”, je pense que tu n’as pas encore vu celui‑ci.",
+    "Un design d’assets parfaitement créatif. Cette plateforme a commencé par une idée… et voici le rendu.",
+    "Une application web pour les personnes ayant perdu leur carte d’identité.",
+    "Donner un nouveau look à une application mobile : “Sara V2”.",
+    "La difficulté des applications financières, c’est de se rappeler que l’argent n’est pas du texte : c’est une valeur réelle.",
+    "Un site web pour un hôtel 3 étoiles.",
+    "Refonte d’un site web bancaire.",
+    "Implémentation de la web app STS_Consulting depuis Figma. Une super expérience avec du CSS natif.",
+    "Le site d’un centre de recherche devrait ressembler à ceci.",
+    "Avant de coder ou designer, il faut d’abord dessiner ses idées. Wireframe de la plateforme du programme national de recherche sur le cacao.",
+];
+
+const dataportfolio_fr = dataportfolio.map((item, idx) => ({
+    ...item,
+    description: dataportfolio_fr_descriptions[idx] || item.description,
+}));
+
+const contentByLang = {
+    fr: {
+        meta,
+        introdata,
+        dataabout,
+        worktimeline,
+        skillsGroups,
+        education,
+        languages,
+        experiences,
+        dataportfolio: dataportfolio_fr,
+        contactConfig,
+    },
+    en: {
+        meta: meta_en,
+        introdata: introdata_en,
+        dataabout: dataabout_en,
+        worktimeline: worktimeline_en,
+        skillsGroups: skillsGroups_en,
+        education: education_en,
+        languages: languages_en,
+        experiences: experiences_en,
+        dataportfolio,
+        contactConfig: contactConfig_en,
+    },
+};
+
+const normalizeContentLang = (lang) => (String(lang || "").toLowerCase().startsWith("en") ? "en" : "fr");
+
+const getContent = (lang) => contentByLang[normalizeContentLang(lang)] || contentByLang.fr;
+
+export { getContent, documents, socialprofils, logotext };

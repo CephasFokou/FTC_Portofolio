@@ -2,10 +2,15 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta, documents } from "../../content_option";
+import { getContent, documents } from "../../content_option";
 import { Link } from "react-router-dom";
+import ftcHero1 from "../../assets/images/ftc-1.jpeg";
+import ftcHero2 from "../../assets/images/ftc-2.jpg";
+import { useTranslation } from "../../i18n/useTranslation";
 
 export const Home = () => {
+  const { t, lang } = useTranslation();
+  const { introdata, meta } = getContent(lang);
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -17,8 +22,20 @@ export const Home = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: `url(${introdata.your_img_url})`, backgroundSize:'cover', backgroundPositionY: '90%' }}
-          ></div>
+          >
+            <div className="hero_carousel" aria-label={t("home.heroCarousel")}>
+              <div className="hero_carousel__cube">
+                <div
+                  className="hero_carousel__face hero_carousel__face--front"
+                  style={{ backgroundImage: `url(${ftcHero1})` }}
+                />
+                <div
+                  className="hero_carousel__face hero_carousel__face--back"
+                  style={{ backgroundImage: `url(${ftcHero2})` }}
+                />
+              </div>
+            </div>
+          </div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
               <div className="intro mx-auto">
@@ -44,7 +61,7 @@ export const Home = () => {
                 <div className="intro_btn-action pb-5">
                   <Link to="/portfolio" className="text_2">
                     <div id="button_h" className="ac_btn btn ">
-                      Projects
+                      {t("home.projects")}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
@@ -52,7 +69,7 @@ export const Home = () => {
                   </Link>
                   <Link to="/about">
                     <div id="button_h" className="ac_btn btn">
-                      About Me
+                      {t("home.aboutMe")}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
@@ -60,15 +77,15 @@ export const Home = () => {
                   </Link>
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn">
-                      Contact Me
+                      {t("home.contactMe")}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
                     </div>
                   </Link>
                   <a href={documents.cv} className="text_2" download>
-                    <div id="button_h" className="ac_btn btn">
-                      Télécharger mon CV
+                    <div id="button_h" className="ac_btn btn mt-3">
+                      {t("home.downloadCv")}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>

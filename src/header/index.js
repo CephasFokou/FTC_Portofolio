@@ -4,8 +4,11 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils, documents } from "../content_option";
 import Themetoggle from "../components/themetoggle";
+import LanguageToggle from "../components/languagetoggle";
+import { useTranslation } from "../i18n/useTranslation";
 
 const Headermain = () => {
+  const { t } = useTranslation();
   const [isActive, setActive] = useState("false");
 
   const handleToggle = () => {
@@ -21,6 +24,7 @@ const Headermain = () => {
             {logotext}
           </Link>
           <div className="d-flex align-items-center">
+          <LanguageToggle />
           <Themetoggle />
           <button className="menu__button  nav_ac" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}
@@ -35,20 +39,23 @@ const Headermain = () => {
               <div className="menu__container p-3">
                 <ul className="the_menu">
                   <li className="menu_item ">
-                  <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
+                  <Link  onClick={handleToggle} to="/" className="my-3">{t("nav.home")}</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> {t("nav.portfolio")}</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                    <Link onClick={handleToggle} to="/experience" className="my-3">{t("nav.experience")}</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
+                  <Link onClick={handleToggle} to="/about" className="my-3">{t("nav.about")}</Link>
+                  </li>
+                  <li className="menu_item">
+                  <Link onClick={handleToggle} to="/contact" className="my-3"> {t("nav.contact")}</Link>
                   </li>
                   <li className="menu_item">
                     <a onClick={handleToggle} href={documents.cv} className="my-3" download>
-                      CV
+                      {t("nav.cv")}
                     </a>
                   </li>
                   <li className="menu_item">
@@ -58,7 +65,7 @@ const Headermain = () => {
                       className="my-3"
                       download
                     >
-                      Lettre
+                      {t("nav.letter")}
                     </a>
                   </li>
                 </ul>
@@ -70,7 +77,7 @@ const Headermain = () => {
             <a href={socialprofils.linkedin}>LinkedIn</a>
             <a href={socialprofils.github}>Github</a>
             </div>
-            <p className="copyright m-0">copyright {logotext}</p>
+            <p className="copyright m-0">{t("footer.copyright")} {logotext}</p>
           </div>
         </div>
       </header>

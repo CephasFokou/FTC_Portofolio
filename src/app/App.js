@@ -8,6 +8,7 @@ import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
 import Headermain from "../header";
 import "./App.css";
+import { LanguageProvider } from "../context/language";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -20,11 +21,13 @@ const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <ScrollToTop>
-        <Headermain />
-        <AppRoutes />
-      </ScrollToTop>
-    </Router>
+    <LanguageProvider>
+      <Router basename={process.env.PUBLIC_URL}>
+        <ScrollToTop>
+          <Headermain />
+          <AppRoutes />
+        </ScrollToTop>
+      </Router>
+    </LanguageProvider>
   );
 }

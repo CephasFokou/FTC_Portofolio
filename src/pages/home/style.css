@@ -98,6 +98,56 @@ section {
     position: relative;
 }
 
+.hero_carousel {
+    position: absolute;
+    inset: 0;
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+.hero_carousel__cube {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    animation: heroCarouselFlip 10s infinite ease-in-out;
+    will-change: transform;
+}
+
+.hero_carousel__face {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 90%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(1px);
+}
+
+.hero_carousel__face--back {
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+@keyframes heroCarouselFlip {
+    0%,
+    42% {
+        transform: rotateY(0deg);
+    }
+    50%,
+    92% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero_carousel__cube {
+        animation: none;
+    }
+}
+
 .ac_btn {
     padding: 4px 19px;
     color: var(--secondary-color);

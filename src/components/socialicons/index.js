@@ -9,8 +9,10 @@ import {
   FaTwitch,
 } from "react-icons/fa";
 import { socialprofils } from "../../content_option";
+import { useTranslation } from "../../i18n/useTranslation";
 
 export const Socialicons = (params) => {
+  const { t } = useTranslation();
   return (
     <div className="stick_follow_icon">
       <ul>
@@ -57,7 +59,7 @@ export const Socialicons = (params) => {
           </li>
         )}
       </ul>
-      <p>Follow Me</p>
+      <p>{t("footer.followMe")}</p>
     </div>
   );
 };
