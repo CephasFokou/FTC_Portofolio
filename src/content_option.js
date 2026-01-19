@@ -342,6 +342,10 @@ const documents = {
     coverLetter: require("./assets/Lettre_Motivation_Cephas_FOKOU_AFG_Gestionnaire_Applicatifs.pdf.pdf"),
 };
 
+const realisations = {
+    playlistUrl: "https://www.youtube.com/watch?v=WxwplnRRdrA",
+};
+
 const experiences = [{
         role: "Digital Banking Manager / Team Lead / Product Manager",
         company: "Afriland First Bank (via Centre de Recherche PKFokam / PKFRC)",
@@ -647,6 +651,7 @@ const contentByLang = {
         experiences,
         dataportfolio: dataportfolio_fr,
         contactConfig,
+        realisations,
     },
     en: {
         meta: meta_en,
@@ -659,6 +664,7 @@ const contentByLang = {
         experiences: experiences_en,
         dataportfolio,
         contactConfig: contactConfig_en,
+        realisations,
     },
 };
 

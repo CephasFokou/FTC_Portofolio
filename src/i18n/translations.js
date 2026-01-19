@@ -21,6 +21,7 @@ export const translations = {
     },
     home: {
       projects: "Projets",
+      experience: "Expériences",
       aboutMe: "À propos",
       contactMe: "Me contacter",
       downloadCv: "Télécharger mon CV",
@@ -42,6 +43,10 @@ export const translations = {
         "Une sélection de mes expériences et responsabilités clés (données issues de mon CV). Je compléterai avec plus de détails au fur et à mesure.",
       seeVideo: "Voir la vidéo",
       previewVideo: "Prévisualiser la vidéo",
+      worksTitle: "Galerie de réalisations",
+      worksLead: "Vidéos de mes réalisations (YouTube).",
+      openVideo: "Ouvrir",
+      playlistTitle: "Playlist (YouTube)",
     },
     portfolio: {
       title: "Portfolio",
@@ -88,6 +93,7 @@ export const translations = {
     },
     home: {
       projects: "Projects",
+      experience: "Experience",
       aboutMe: "About me",
       contactMe: "Contact",
       downloadCv: "Download my resume",
@@ -109,6 +115,10 @@ export const translations = {
         "A selection of my experience and key responsibilities (from my resume). I’ll add more details over time.",
       seeVideo: "Watch video",
       previewVideo: "Preview video",
+      worksTitle: "Works gallery",
+      worksLead: "Videos of my work (YouTube).",
+      openVideo: "Open",
+      playlistTitle: "Playlist (YouTube)",
     },
     portfolio: {
       title: "Portfolio",

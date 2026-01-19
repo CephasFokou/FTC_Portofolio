@@ -16,8 +16,10 @@ const toEmbedUrl = (url) => {
 
 export const Experience = () => {
   const { t, lang } = useTranslation();
-  const { experiences, meta } = getContent(lang);
+  const { experiences, dataportfolio, realisations, meta } = getContent(lang);
   const items = experiences || [];
+  const works = (dataportfolio || []).filter((p) => String(p.link || "").includes("youtu"));
+  const playlistUrl = realisations?.playlistUrl;
 
   return (
     <HelmetProvider>
@@ -114,6 +116,74 @@ export const Experience = () => {
               </article>
             );
           })}
+        </div>
+
+        <Row className="mb-4">
+          <Col lg="10">
+            <h2 className="display-6 mb-2">{t("experience.worksTitle")}</h2>
+            <p className="exp_lead mb-0">{t("experience.worksLead")}</p>
+          </Col>
+        </Row>
+
+        <div className="works_grid">
+          {playlistUrl ? (
+            <div className="work_card">
+              <div className="work_header">
+                <h3 className="work_title">{t("experience.playlistTitle")}</h3>
+                <a
+                  className="work_link"
+                  href={playlistUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("experience.openVideo")}
+                </a>
+              </div>
+              <details className="work_embed">
+                <summary>{t("experience.previewVideo")}</summary>
+                <div className="work_embed__frame">
+                  <iframe
+                    title={t("experience.playlistTitle")}
+                    src={toEmbedUrl(playlistUrl)}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </details>
+            </div>
+          ) : null}
+
+          {works.map((w, idx) => (
+            <div className="work_card" key={idx}>
+              <div className="work_media">
+                <img className="work_img" src={w.img} alt="" loading="lazy" />
+              </div>
+              <div className="work_body">
+                <p className="work_desc">{w.description}</p>
+                <div className="work_actions">
+                  <a
+                    className="work_link"
+                    href={w.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t("experience.openVideo")}
+                  </a>
+                </div>
+                <details className="work_embed">
+                  <summary>{t("experience.previewVideo")}</summary>
+                  <div className="work_embed__frame">
+                    <iframe
+                      title={`Work video ${idx + 1}`}
+                      src={toEmbedUrl(w.link)}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </details>
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </HelmetProvider>
