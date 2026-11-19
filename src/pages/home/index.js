@@ -27,7 +27,7 @@ export const Home = () => {
             </div>
           </div>
           <figure className="hero__portrait">
-            <img src={hero.portrait} alt={t("home.portraitAlt")} width="869" height="1200" />
+            <img src={hero.portrait} alt={t("home.portraitAlt")} width="920" height="1150" />
           </figure>
         </div>
       </section>

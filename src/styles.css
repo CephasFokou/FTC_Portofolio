@@ -434,7 +434,7 @@ main:focus {
 }
 
 .hero__text {
-  padding: clamp(56px, 9vw, 120px) 0 clamp(56px, 8vw, 104px);
+  padding: clamp(56px, 8vw, 104px) 0;
 }
 
 .hero__role {
@@ -468,17 +468,17 @@ main:focus {
 }
 
 .hero__portrait {
-  margin: 0;
-  align-self: end;
-  background: var(--mist);
+  margin: clamp(40px, 6vw, 72px) 0;
+  align-self: center;
+  border-bottom: 4px solid var(--brass);
 }
 
 .hero__portrait img {
   width: 100%;
-  max-height: 640px;
+  aspect-ratio: 4 / 5;
+  max-height: 600px;
   object-fit: cover;
-  object-position: top center;
-  mix-blend-mode: multiply;
+  object-position: center top;
 }
 
 @media (max-width: 900px) {
@@ -499,8 +499,8 @@ main:focus {
     max-width: 420px;
   }
 
-  .hero__portrait img {
-    max-height: 460px;
+  .hero__portrait {
+    margin: 0 0 48px;
   }
 }
 
@@ -1030,7 +1030,6 @@ main:focus {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top;
-  mix-blend-mode: multiply;
 }
 
 .about__side .h3 {
