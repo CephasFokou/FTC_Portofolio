@@ -456,7 +456,7 @@ main:focus {
   font-variation-settings: "wdth" 80;
   letter-spacing: -0.015em;
   line-height: 1.02;
-  max-width: 13ch;
+  max-width: 16ch;
   margin-bottom: 28px;
 }
 
@@ -504,116 +504,37 @@ main:focus {
   }
 }
 
-/* ---------- Route (empreinte des mises en production) ---------- */
+/* ---------- Statement (aspiration) ---------- */
 
-.route {
+.statement {
   background: var(--ink);
   color: var(--paper);
-  padding: clamp(56px, 8vw, 96px) 0 clamp(64px, 8vw, 104px);
+  padding: clamp(72px, 10vw, 128px) 0;
 }
 
-.route__head {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  gap: 32px;
-  align-items: end;
-  margin-bottom: 56px;
-}
-
-.route__title {
-  color: var(--paper);
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 700;
-}
-
-.route__lead {
+.statement__text {
   margin: 0;
-  color: #b9c6d8;
-  max-width: 52ch;
-}
-
-.route__line {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.route__line::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 9px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brass) 0 60%, var(--ink-3) 60% 100%);
-  transform-origin: left center;
-  animation: route-draw 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s both;
-}
-
-.route__stop {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-top: 40px;
-}
-
-.route__dot {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid var(--brass);
-  background: var(--brass);
-}
-
-.route__stop.is-next .route__dot {
-  background: var(--ink);
-  border-color: #8ea2bf;
-}
-
-.route__code {
+  max-width: 18ch;
   font-family: var(--font-display);
-  font-variation-settings: "wdth" 75;
-  font-size: clamp(44px, 5vw, 64px);
+  font-variation-settings: "wdth" 80;
   font-weight: 800;
-  line-height: 1;
-  color: var(--paper);
-  margin-bottom: 12px;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
 }
 
-.route__stop.is-next .route__code {
-  color: transparent;
-  -webkit-text-stroke: 1.5px #8ea2bf;
+.statement__text::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 32px;
+  background: var(--brass);
+  transform-origin: left center;
+  animation: bar-draw 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s both;
 }
 
-.route__country {
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.route__product {
-  color: #b9c6d8;
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.route__status {
-  font-size: 14px;
-  color: var(--brass);
-  font-weight: 600;
-}
-
-.route__stop.is-next .route__status {
-  color: #8ea2bf;
-}
-
-@keyframes route-draw {
+@keyframes bar-draw {
   from {
     transform: scaleX(0);
   }
@@ -622,59 +543,11 @@ main:focus {
   }
 }
 
-@media (max-width: 900px) {
-  .route__head {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 40px;
-  }
-
-  .route__line {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding-left: 40px;
-  }
-
-  .route__line::before {
-    left: 9px;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    height: auto;
-    background: linear-gradient(180deg, var(--brass) 0 60%, var(--ink-3) 60% 100%);
-    transform-origin: top center;
-    animation-name: route-draw-v;
-  }
-
-  .route__stop {
-    padding-top: 0;
-  }
-
-  .route__dot {
-    left: -40px;
-    top: 4px;
-  }
-
-  .route__code {
-    font-size: 40px;
-  }
-
-  @keyframes route-draw-v {
-    from {
-      transform: scaleY(0);
-    }
-    to {
-      transform: scaleY(1);
-    }
-  }
-}
-
 /* ---------- Offres ---------- */
 
 .offers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(24px, 4vw, 48px);
 }
 
@@ -687,7 +560,13 @@ main:focus {
   color: var(--steel);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .offers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   .offers {
     grid-template-columns: 1fr;
   }

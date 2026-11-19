@@ -87,69 +87,36 @@ const archiveMedia = [
 
 const fr = {
     meta: {
-        title: "Cephas Fokou — Directeur Général de KATALYS",
+        title: "Cephas Fokou — Directeur Général | Digital Banking & transformation numérique",
         description:
-            "Cephas Fokou, Directeur Général de KATALYS. Intégration de systèmes, banque digitale et services managés : du cadrage à la mise en production, en Afrique centrale et de l'Ouest.",
+            "Cephas Fokou, Directeur Général. Digital Banking et transformation numérique : je fais avancer les projets du cadrage à la production.",
     },
     hero: {
         name: "Cephas Fokou",
-        role: "Directeur Général, KATALYS",
-        title: "Je fais passer les projets bancaires du cadrage à la production.",
+        role: "Directeur Général, Digital Banking & transformation numérique",
+        title: "Je fais avancer les projets numériques, du cadrage à la production.",
         lead:
-            "Après plus de quatre ans à piloter la banque digitale de filiales bancaires africaines, je dirige KATALYS, société d'intégration de systèmes et de services numériques. Direction, gestion de projet, management d'équipes techniques et recrutement de talents : je tiens le fil jusqu'à la mise en service.",
+            "Depuis 2017, je conçois, livre et fais vivre des solutions numériques : d'abord comme développeur et designer, puis comme chef d'équipe, et enfin comme Digital Banking Manager. Aujourd'hui, je poursuis ce chemin en entrepreneur.",
         portrait,
     },
-    footprint: {
-        title: "Mises en production pilotées",
-        lead: "Produits bancaires dont j'ai coordonné la livraison ou l'exploitation, par pays.",
-        items: [
-            { code: "CM", country: "Cameroun", product: "SARA, site web bancaire", status: "En production", live: true },
-            { code: "SS", country: "Soudan du Sud", product: "Internet Banking", status: "En production", live: true },
-            { code: "GN", country: "Guinée", product: "SARA, services Web & Cloud", status: "En service", live: true },
-            { code: "CI", country: "Côte d'Ivoire", product: "Internet Banking V3", status: "Go-Live en préparation", live: false },
-            { code: "ST", country: "Sao Tomé-et-Principe", product: "Internet Banking V3", status: "Go-Live en préparation", live: false },
-        ],
+    statement: {
+        text: "Faire de la technologie un levier de transformation.",
     },
     offers: {
-        title: "Ce que je prends en charge",
+        title: "Ce que j'apporte",
         items: [
-            {
-                title: "Cadrer",
-                text: "Comprendre le besoin réel avant d'écrire une ligne de code.",
-                points: ["Audit et schéma directeur", "Analyse métier et spécifications", "Choix de solutions, appels d'offres"],
-            },
-            {
-                title: "Intégrer et mettre en production",
-                text: "Relier les applications au Core Banking et livrer une version recettée.",
-                points: ["Intégration API et Core Banking", "Migration de données, tests et recette", "Go-Live et accompagnement post-production"],
-            },
-            {
-                title: "Exploiter",
-                text: "Garder le service disponible une fois les projecteurs éteints.",
-                points: ["Hébergement cloud et infogérance", "Monitoring et observabilité", "Support et maintenance sous SLA"],
-            },
+            { title: "Du cadrage à la production", text: "Faire avancer des projets complexes jusqu'à la mise en service, sans perdre le fil." },
+            { title: "Aligner les acteurs", text: "Faire travailler ensemble métiers, DSI et équipes techniques autour d'objectifs clairs." },
+            { title: "Faire grandir les équipes", text: "Recruter, accompagner et transmettre pour rendre les équipes autonomes." },
+            { title: "Tenir dans la durée", text: "Garder la qualité et la continuité de service une fois le projet livré." },
         ],
     },
     homeProjects: { title: "Projets récents", all: "Tous les projets" },
     homeCta: {
-        title: "Un projet à cadrer ou à remettre sur les rails ?",
-        text: "Banques, microfinances, intégrateurs : parlons de votre contexte.",
+        title: "Un projet à faire avancer ?",
+        text: "Écrivez-moi pour en parler.",
     },
     recent: [
-        {
-            id: "katalys",
-            title: "Méthodologie de déploiement KATALYS",
-            context: "KATALYS · 2026",
-            summary:
-                "Un cadre unique pour déployer Granit, SARA et l'Internet Banking chez les banques clientes, du besoin exprimé jusqu'à l'autonomie de l'équipe cliente.",
-            role: [
-                "Conception d'une méthode en six étapes, chacune fermée par un livrable validé",
-                "Répartition des responsabilités : centre de développement, Delivery, DevOps, QA, IT et métier côté client",
-                "Modèles de services associés : Monitoring & Observabilité, Exploitation & Maintenance L1",
-            ],
-            outcome: "Un référentiel commun pour planifier, recetter, mettre en production et transmettre.",
-            tags: ["Gouvernance", "Delivery", "Services managés"],
-        },
         {
             id: "ibv3",
             title: "Internet Banking V3, déploiement multi-pays",
@@ -191,6 +158,20 @@ const fr = {
             ],
             outcome: "Une feuille de route priorisée et partagée avec les parties prenantes.",
             tags: ["Produit", "Roadmap", "Paiement mobile"],
+        },
+        {
+            id: "katalys",
+            title: "Méthodologie de déploiement KATALYS",
+            context: "KATALYS · 2026",
+            summary:
+                "Un cadre unique pour déployer Granit, SARA et l'Internet Banking chez les banques clientes, du besoin exprimé jusqu'à l'autonomie de l'équipe cliente.",
+            role: [
+                "Conception d'une méthode en six étapes, chacune fermée par un livrable validé",
+                "Répartition des responsabilités : centre de développement, Delivery, DevOps, QA, IT et métier côté client",
+                "Modèles de services associés : Monitoring & Observabilité, Exploitation & Maintenance L1",
+            ],
+            outcome: "Un référentiel commun pour planifier, recetter, mettre en production et transmettre.",
+            tags: ["Gouvernance", "Delivery", "Services managés"],
         },
         {
             id: "supra",
@@ -315,9 +296,9 @@ const fr = {
     about: {
         title: "À propos",
         intro: [
-            "Je dirige KATALYS, une société qui part d'un constat simple : la plupart des projets informatiques ne bloquent pas faute de technologie, mais faute d'exécution. Besoins mal définis, environnements non prêts, recettes insuffisantes, mises en production repoussées.",
-            "Mon parcours s'est construit sur ce terrain. Développeur puis chef d'équipe, j'ai ensuite piloté pendant plus de quatre ans les produits de banque digitale de filiales présentes dans plusieurs pays africains, avec une équipe de vingt développeurs. J'ai appris à tenir ensemble les exigences des DSI, des métiers et des équipes techniques jusqu'au Go-Live.",
-            "Aujourd'hui, je cumule les rôles de directeur général, chef de projet, manager et recruteur de talents. Mon fil conducteur ne change pas : livrer juste, au bon niveau de qualité, avec une exploitation réaliste.",
+            "Depuis 2017, je conçois, livre et fais vivre des solutions numériques : d'abord comme développeur et designer, puis comme chef d'équipe, et enfin comme Digital Banking Manager.",
+            "J'ai piloté des produits de banque digitale utilisés dans plusieurs pays africains (Internet Banking, paiement mobile, sites bancaires) avec une équipe de vingt développeurs. J'y ai appris l'essentiel : la valeur ne vient pas seulement de la livraison, mais de la capacité à livrer juste, au bon niveau de qualité, avec une exploitation réaliste.",
+            "Aujourd'hui, je poursuis ce chemin en entrepreneur avec KATALYS, tout en accompagnant des projets Web & Cloud. Ce qui m'anime : faire de la technologie un levier de transformation.",
         ],
         skillsTitle: "Compétences",
         skills: [
@@ -351,69 +332,36 @@ const fr = {
 
 const en = {
     meta: {
-        title: "Cephas Fokou — CEO of KATALYS",
+        title: "Cephas Fokou — CEO | Digital Banking & digital transformation",
         description:
-            "Cephas Fokou, CEO of KATALYS. Systems integration, digital banking and managed services: from scoping to production across Central and West Africa.",
+            "Cephas Fokou, CEO. Digital banking and digital transformation: I move projects from scoping to production.",
     },
     hero: {
         name: "Cephas Fokou",
-        role: "CEO, KATALYS",
-        title: "I take banking projects from scoping to production.",
+        role: "CEO, Digital Banking & digital transformation",
+        title: "I move digital projects forward, from scoping to production.",
         lead:
-            "After more than four years leading digital banking products for African bank subsidiaries, I now run KATALYS, a systems integration and digital services company. Leadership, project management, technical team management and talent hiring: I hold the thread until the service goes live.",
+            "Since 2017, I have designed, delivered and run digital solutions: first as a developer and designer, then as a team lead, then as a Digital Banking Manager. Today I continue that path as an entrepreneur.",
         portrait,
     },
-    footprint: {
-        title: "Go-lives I have led",
-        lead: "Banking products whose delivery or operations I coordinated, by country.",
-        items: [
-            { code: "CM", country: "Cameroon", product: "SARA, bank website", status: "Live", live: true },
-            { code: "SS", country: "South Sudan", product: "Internet Banking", status: "Live", live: true },
-            { code: "GN", country: "Guinea", product: "SARA, Web & Cloud services", status: "In service", live: true },
-            { code: "CI", country: "Côte d'Ivoire", product: "Internet Banking V3", status: "Go-live in preparation", live: false },
-            { code: "ST", country: "São Tomé and Príncipe", product: "Internet Banking V3", status: "Go-live in preparation", live: false },
-        ],
+    statement: {
+        text: "Making technology a lever for transformation.",
     },
     offers: {
-        title: "What I take on",
+        title: "What I bring",
         items: [
-            {
-                title: "Scope",
-                text: "Understand the real need before writing a line of code.",
-                points: ["IT audit and master plan", "Business analysis and specifications", "Solution selection, tenders"],
-            },
-            {
-                title: "Integrate and go live",
-                text: "Connect applications to the core banking system and ship a tested release.",
-                points: ["API and core banking integration", "Data migration, testing and UAT", "Go-live and post-production support"],
-            },
-            {
-                title: "Operate",
-                text: "Keep the service running once the launch is over.",
-                points: ["Cloud hosting and managed IT", "Monitoring and observability", "SLA-based support and maintenance"],
-            },
+            { title: "From scoping to production", text: "Moving complex projects all the way to go-live without losing the thread." },
+            { title: "Aligning people", text: "Getting business teams, IT departments and engineers working toward clear goals." },
+            { title: "Growing teams", text: "Hiring, coaching and passing on knowledge so teams become self-sufficient." },
+            { title: "Lasting quality", text: "Keeping quality and service continuity once the project has shipped." },
         ],
     },
     homeProjects: { title: "Recent projects", all: "All projects" },
     homeCta: {
-        title: "A project to scope or to get back on track?",
-        text: "Banks, microfinance institutions, integrators: let's talk about your context.",
+        title: "A project to move forward?",
+        text: "Write to me and let's talk.",
     },
     recent: [
-        {
-            id: "katalys",
-            title: "KATALYS deployment methodology",
-            context: "KATALYS · 2026",
-            summary:
-                "One framework to deploy Granit, SARA and Internet Banking at client banks, from the stated need to a self-sufficient client team.",
-            role: [
-                "Designed a six-step method, each step closed by a signed-off deliverable",
-                "Defined responsibilities across the development centre, Delivery, DevOps, QA, client IT and business teams",
-                "Related service models: Monitoring & Observability, Operations & L1 Maintenance",
-            ],
-            outcome: "A shared reference to plan, test, go live and hand over.",
-            tags: ["Governance", "Delivery", "Managed services"],
-        },
         {
             id: "ibv3",
             title: "Internet Banking V3, multi-country rollout",
@@ -453,6 +401,20 @@ const en = {
             ],
             outcome: "A prioritised roadmap shared with stakeholders.",
             tags: ["Product", "Roadmap", "Mobile payments"],
+        },
+        {
+            id: "katalys",
+            title: "KATALYS deployment methodology",
+            context: "KATALYS · 2026",
+            summary:
+                "One framework to deploy Granit, SARA and Internet Banking at client banks, from the stated need to a self-sufficient client team.",
+            role: [
+                "Designed a six-step method, each step closed by a signed-off deliverable",
+                "Defined responsibilities across the development centre, Delivery, DevOps, QA, client IT and business teams",
+                "Related service models: Monitoring & Observability, Operations & L1 Maintenance",
+            ],
+            outcome: "A shared reference to plan, test, go live and hand over.",
+            tags: ["Governance", "Delivery", "Managed services"],
         },
         {
             id: "supra",
@@ -575,9 +537,9 @@ const en = {
     about: {
         title: "About",
         intro: [
-            "I run KATALYS, a company built on a simple observation: most IT projects don't stall for lack of technology, but for lack of execution. Unclear needs, unprepared environments, thin testing, postponed go-lives.",
-            "That is where my career was built. Developer, then team lead, I spent more than four years leading digital banking products for subsidiaries in several African countries, with a team of twenty developers. I learned to keep IT departments, business teams and engineers aligned all the way to go-live.",
-            "Today I combine the roles of CEO, project manager, team manager and talent recruiter. My guiding line hasn't changed: deliver the right thing, at the right quality, with realistic operations.",
+            "Since 2017, I have designed, delivered and run digital solutions: first as a developer and designer, then as a team lead, then as a Digital Banking Manager.",
+            "I led digital banking products used in several African countries (Internet Banking, mobile payments, bank websites) with a team of twenty developers. I learned what matters most: value comes not only from shipping, but from shipping the right thing, at the right quality, with realistic operations.",
+            "Today I continue that path as an entrepreneur with KATALYS, while supporting Web & Cloud projects. What drives me: making technology a lever for transformation.",
         ],
         skillsTitle: "Skills",
         skills: [

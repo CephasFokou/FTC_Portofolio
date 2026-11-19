@@ -1,6 +1,6 @@
 {
   "short_name": "Cephas Fokou",
-  "name": "Cephas Fokou — Directeur Général de KATALYS",
+  "name": "Cephas Fokou — Directeur Général",
   "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
   "start_url": ".",
   "display": "standalone",

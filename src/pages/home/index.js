@@ -6,7 +6,7 @@ import { Seo } from "../../components/seo";
 
 export const Home = () => {
   const { t, lang } = useTranslation();
-  const { meta, hero, footprint, offers, recent, homeProjects, homeCta } = getContent(lang);
+  const { meta, hero, statement, offers, recent, homeProjects, homeCta } = getContent(lang);
 
   return (
     <>
@@ -32,23 +32,9 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="route" aria-labelledby="route-title">
+      <section className="statement">
         <div className="wrap">
-          <div className="route__head">
-            <h2 id="route-title" className="route__title">{footprint.title}</h2>
-            <p className="route__lead">{footprint.lead}</p>
-          </div>
-          <ol className="route__line">
-            {footprint.items.map((item) => (
-              <li key={item.code} className={`route__stop ${item.live ? "is-live" : "is-next"}`}>
-                <span className="route__dot" aria-hidden="true" />
-                <span className="route__code" aria-hidden="true">{item.code}</span>
-                <span className="route__country">{item.country}</span>
-                <span className="route__product">{item.product}</span>
-                <span className="route__status">{item.status}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="statement__text">{statement.text}</p>
         </div>
       </section>
 
@@ -60,9 +46,6 @@ export const Home = () => {
               <article key={o.title} className="offer">
                 <h3 className="h3">{o.title}</h3>
                 <p>{o.text}</p>
-                <ul className="dash-list">
-                  {o.points.map((p) => <li key={p}>{p}</li>)}
-                </ul>
               </article>
             ))}
           </div>
