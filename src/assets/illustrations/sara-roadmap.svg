@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Public Sans, Arial, sans-serif">
+<rect width="1200" height="800" fill="#EEF1F5"/>
+<text x="80" y="110" fill="#0F2440" font-size="36" font-weight="700">Roadmap SARA 2026</text>
+<text x="80" y="150" fill="#4A5A70" font-size="20">36 initiatives priorisées par score RICE sur 12 mois</text>
+<g font-size="16" fill="#4A5A70" text-anchor="middle"><text x="355" y="220">T1</text><text x="595" y="220">T2</text><text x="835" y="220">T3</text><text x="1075" y="220">T4</text></g>
+<g stroke="#D6DCE4"><path d="M240 235V720M480 235V720M720 235V720M960 235V720"/></g>
+<g font-size="17" fill="#0F2440" font-weight="600"><text x="80" y="290">Interopérabilité</text><text x="80" y="400">Conformité</text><text x="80" y="510">Migration</text><text x="80" y="620">Expansion</text></g>
+<g font-size="15" fill="#FFFFFF"><rect x="250" y="262" width="400" height="44" rx="6" fill="#0F2440"/><text x="268" y="290">GIMAC · paiements interbancaires</text>
+<rect x="500" y="372" width="420" height="44" rx="6" fill="#1B3558"/><text x="518" y="400">BCEAO · exigences réglementaires</text>
+<rect x="300" y="482" width="360" height="44" rx="6" fill="#C29A47"/><text x="318" y="510" fill="#0F2440">Liberia · V1 vers V2</text>
+<rect x="740" y="592" width="400" height="44" rx="6" fill="#0F2440"/><text x="758" y="620">Nouveaux pays</text></g>
+<g transform="translate(80 670)" font-size="16" fill="#4A5A70"><text>En service : Cameroun · Côte d'Ivoire · Guinée</text></g>
+</svg>

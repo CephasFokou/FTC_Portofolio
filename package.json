@@ -1,29 +1,23 @@
 {
-    "name": "react-portfolio",
+    "name": "cephas-fokou-portfolio",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "bootstrap": "^5.2.3",
+        "@fontsource-variable/archivo": "^5.3.0",
+        "@fontsource-variable/public-sans": "^5.3.0",
         "emailjs-com": "^3.2.0",
-        "lightgallery": "^2.7.2",
         "react": "^18.2.0",
-        "react-bootstrap": "^2.7.0",
         "react-dom": "^18.2.0",
         "react-helmet-async": "^1.0.7",
-        "react-icons": "^4.1.0",
         "react-router-dom": "^6.6.2",
         "react-scripts": "^5.0.1",
-        "react-transition-group": "^4.4.2",
-        "typewriter-effect": "^2.18.2",
         "web-vitals": "^3.1.1"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "yarn build && cp build/index.html build/404.html",
-        "deploy": "gh-pages -d build"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [

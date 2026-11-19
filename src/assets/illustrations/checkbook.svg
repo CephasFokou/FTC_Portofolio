@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Public Sans, Arial, sans-serif">
+<rect width="1200" height="800" fill="#0F2440"/>
+<g transform="translate(90 130) rotate(-4)"><rect width="520" height="250" rx="12" fill="#F4EBD6"/><rect y="0" width="520" height="56" rx="12" fill="#C29A47"/><rect y="40" width="520" height="16" fill="#C29A47"/>
+<text x="28" y="38" fill="#0F2440" font-size="20" font-weight="700">CHÉQUIER · 25 formules</text>
+<g stroke="#B8A47A" stroke-width="2"><path d="M28 120H492M28 170H360M28 220H260"/></g><text x="380" y="176" fill="#6E5D36" font-size="18">XAF ______</text></g>
+<g transform="translate(130 420)"><rect width="460" height="250" rx="12" fill="#1B3558"/><text x="28" y="50" fill="#FFFFFF" font-size="22" font-weight="700">Demande de chéquier</text>
+<g font-size="17" fill="#CFD8E6"><text x="28" y="98">Type</text><text x="200" y="98" fill="#FFFFFF">Chéquier 25 formules</text><text x="28" y="138">Frais</text><text x="200" y="138" fill="#FFFFFF">Calculés en temps réel</text><text x="28" y="178">Statut</text></g>
+<rect x="200" y="160" width="150" height="30" rx="15" fill="#C29A47"/><text x="275" y="181" fill="#0F2440" font-size="15" font-weight="700" text-anchor="middle">En traitement</text></g>
+<g font-size="18" fill="#FFFFFF"><text x="700" y="140" font-size="26" font-weight="700">Six API vers le Core Banking</text>
+<g transform="translate(700 180)"><g fill="#1B3558"><rect width="420" height="56" rx="6"/><rect y="70" width="420" height="56" rx="6"/><rect y="140" width="420" height="56" rx="6"/><rect y="210" width="420" height="56" rx="6"/><rect y="280" width="420" height="56" rx="6"/><rect y="350" width="420" height="56" rx="6"/></g>
+<g fill="#C29A47"><rect width="6" height="56"/><rect y="70" width="6" height="56"/><rect y="140" width="6" height="56"/><rect y="210" width="6" height="56"/><rect y="280" width="6" height="56"/><rect y="350" width="6" height="56"/></g>
+<text x="28" y="35">Demander un chéquier</text><text x="28" y="105">Suivre le statut</text><text x="28" y="175">Historique des demandes</text><text x="28" y="245">Types de chéquier</text><text x="28" y="315">Calcul des frais</text><text x="28" y="385">Pagination des types</text></g></g>
+</svg>

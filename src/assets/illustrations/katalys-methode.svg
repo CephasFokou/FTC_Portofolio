@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Public Sans, Arial, sans-serif">
+<rect width="1200" height="800" fill="#0F2440"/>
+<g stroke="#2E4A72" stroke-width="1"><path d="M0 200H1200M0 400H1200M0 600H1200M300 0V800M600 0V800M900 0V800"/></g>
+<text x="80" y="120" fill="#FFFFFF" font-size="40" font-weight="700">Du besoin à l'autonomie du client</text>
+<text x="80" y="164" fill="#9FB0C8" font-size="22">Six étapes, chacune fermée par un livrable validé</text>
+<path d="M140 470 H1060" stroke="#C29A47" stroke-width="4"/>
+<g font-size="20" text-anchor="middle">
+<g transform="translate(140 470)"><circle r="34" fill="#0F2440" stroke="#C29A47" stroke-width="4"/><text y="8" fill="#FFFFFF" font-size="24" font-weight="700">1</text><text y="80" fill="#FFFFFF" font-weight="600">Qualifier</text><text y="108" fill="#9FB0C8" font-size="16">Fiche de besoin</text></g>
+<g transform="translate(324 470)"><circle r="34" fill="#0F2440" stroke="#C29A47" stroke-width="4"/><text y="8" fill="#FFFFFF" font-size="24" font-weight="700">2</text><text y="80" fill="#FFFFFF" font-weight="600">Préparer</text><text y="108" fill="#9FB0C8" font-size="16">Environnements</text></g>
+<g transform="translate(508 470)"><circle r="34" fill="#0F2440" stroke="#C29A47" stroke-width="4"/><text y="8" fill="#FFFFFF" font-size="24" font-weight="700">3</text><text y="80" fill="#FFFFFF" font-weight="600">Implémenter</text><text y="108" fill="#9FB0C8" font-size="16">Version en recette</text></g>
+<g transform="translate(692 470)"><circle r="34" fill="#0F2440" stroke="#C29A47" stroke-width="4"/><text y="8" fill="#FFFFFF" font-size="24" font-weight="700">4</text><text y="80" fill="#FFFFFF" font-weight="600">Valider</text><text y="108" fill="#9FB0C8" font-size="16">PV de recette</text></g>
+<g transform="translate(876 470)"><circle r="34" fill="#0F2440" stroke="#C29A47" stroke-width="4"/><text y="8" fill="#FFFFFF" font-size="24" font-weight="700">5</text><text y="80" fill="#FFFFFF" font-weight="600">Opérer</text><text y="108" fill="#9FB0C8" font-size="16">Rapport post-prod</text></g>
+<g transform="translate(1060 470)"><circle r="34" fill="#C29A47"/><text y="8" fill="#0F2440" font-size="24" font-weight="700">6</text><text y="80" fill="#FFFFFF" font-weight="600">Transmettre</text><text y="108" fill="#9FB0C8" font-size="16">Équipe autonome</text></g>
+</g>
+<g font-size="18" fill="#CFD8E6"><rect x="80" y="660" width="320" height="56" rx="6" fill="#1B3558"/><text x="104" y="695">Granit · microfinance</text>
+<rect x="440" y="660" width="320" height="56" rx="6" fill="#1B3558"/><text x="464" y="695">SARA · paiement mobile</text>
+<rect x="800" y="660" width="320" height="56" rx="6" fill="#1B3558"/><text x="824" y="695">Internet Banking</text></g>
+</svg>

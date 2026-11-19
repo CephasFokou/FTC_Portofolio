@@ -1,93 +1,56 @@
-import React, { useState } from "react";
-import "./style.css";
-import { VscGrabber, VscClose } from "react-icons/vsc";
-import { Link } from "react-router-dom";
-import { logotext, socialprofils, documents } from "../content_option";
-import Themetoggle from "../components/themetoggle";
+import React, { useEffect, useState } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import { logotext, documents } from "../content_option";
 import LanguageToggle from "../components/languagetoggle";
 import { useTranslation } from "../i18n/useTranslation";
 
-const Headermain = () => {
-  const { t } = useTranslation();
-  const [isActive, setActive] = useState("false");
+const links = [
+  { to: "/portfolio", key: "nav.projects" },
+  { to: "/experience", key: "nav.experience" },
+  { to: "/about", key: "nav.about" },
+  { to: "/contact", key: "nav.contact" },
+];
 
-  const handleToggle = () => {
-    setActive(!isActive);
-    document.body.classList.toggle("ovhidden");
-  };
+const Header = () => {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <>
-      <header className="fixed-top site__header">
-        <div className="d-flex align-items-center justify-content-between">
-          <Link  className="navbar-brand nav_ac" to="/">
-            {logotext}
-          </Link>
-          <div className="d-flex align-items-center">
-          <LanguageToggle />
-          <Themetoggle />
-          <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
-          </button>
-          
+    <header className="site-header">
+      <div className="wrap site-header__inner">
+        <Link to="/" className="brand">
+          {logotext}
+        </Link>
+        <button
+          type="button"
+          className="menu-btn"
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? t("nav.close") : t("nav.menu")}
+        </button>
+        <nav id="site-nav" className={`site-nav ${open ? "is-open" : ""}`} aria-label="Navigation">
+          <ul>
+            {links.map((l) => (
+              <li key={l.to}>
+                <NavLink to={l.to}>{t(l.key)}</NavLink>
+              </li>
+            ))}
+          </ul>
+          <div className="site-nav__tools">
+            <LanguageToggle />
+            <a className="btn btn--ghost btn--sm" href={documents.cv} download>
+              {t("nav.cv")}
+            </a>
           </div>
-        </div>
-
-        <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
-          <div className="bg__menu h-100">
-            <div className="menu__wrapper">
-              <div className="menu__container p-3">
-                <ul className="the_menu">
-                  <li className="menu_item ">
-                  <Link  onClick={handleToggle} to="/" className="my-3">{t("nav.home")}</Link>
-                  </li>
-                  <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> {t("nav.portfolio")}</Link>
-                  </li>
-                  <li className="menu_item">
-                    <Link onClick={handleToggle} to="/experience" className="my-3">{t("nav.experience")}</Link>
-                  </li>
-                  <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">{t("nav.about")}</Link>
-                  </li>
-                  <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> {t("nav.contact")}</Link>
-                  </li>
-                  <li className="menu_item">
-                    <a onClick={handleToggle} href={documents.cv} className="my-3" download>
-                      {t("nav.cv")}
-                    </a>
-                  </li>
-                  <li className="menu_item">
-                    <a
-                      onClick={handleToggle}
-                      href={documents.coverLetter}
-                      className="my-3"
-                      download
-                    >
-                      {t("nav.letter")}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
-            <div className="d-flex">
-            <a href={socialprofils.linkedin}>LinkedIn</a>
-            <a href={socialprofils.github}>Github</a>
-            </div>
-            <p className="copyright m-0">{t("footer.copyright")} {logotext}</p>
-          </div>
-        </div>
-      </header>
-      <div className="br-top"></div>
-      <div className="br-bottom"></div>
-      <div className="br-left"></div>
-      <div className="br-right"></div>
-      
-    </>
+        </nav>
+      </div>
+    </header>
   );
 };
 
-export default Headermain;
+export default Header;

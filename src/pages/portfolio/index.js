@@ -1,66 +1,107 @@
-import React from "react";
-import "./style.css";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
 import { getContent } from "../../content_option";
 import { useTranslation } from "../../i18n/useTranslation";
+import { Seo } from "../../components/seo";
+import { Lightbox } from "../../components/lightbox";
 
-import LightGallery from 'lightgallery/react';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgVideo from 'lightgallery/plugins/video';
-// import styles
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-
+const isVideo = (url) => /youtu/.test(url || "");
 
 export const Portfolio = () => {
   const { t, lang } = useTranslation();
-  const { dataportfolio, meta } = getContent(lang);
+  const { meta, recent, archive } = getContent(lang);
+  const [box, setBox] = useState(null);
+
+  const openGallery = (images, title) => setBox({ images, title, index: 0 });
 
   return (
-    <HelmetProvider>
-      <Container className="About-header">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>
-            {t("portfolio.title")} | {meta.title}
-          </title>{" "}
-          <meta name="description" content={meta.description} />
-        </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4"> {t("portfolio.title")} </h1>{" "}
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col>
-        </Row>
-        <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            const { gallery } = data;
-            return (
-              <div key={i} className="po_item">
-                    <img src={data.img} alt="" /> 
-                <div className="content">
-                  <p>{data.description}</p>
-                  <LightGallery images={gallery.gallery} plugins={[lgZoom, lgVideo]} mode="lg-fade">
-                    {
-                    gallery.map(image => (
-                      <div 
-                        className="w-0" 
-                        data-src={image.src}
-                      >
-                      </div>
-                    ))} 
-                      <a href="#" hidden={data.gallery.length==0} src={data.img} className="btn-close text-bg-light m-1"> {t("portfolio.preview")}</a>
-                    </LightGallery>
-                      <a href={data.link} target="_blank" className="btn-demo m-1" hidden={data.link.length==0}> {t("portfolio.viewDemo")}</a>
-                </div>
-              </div>
+    <>
+      <Seo title={`${t("projects.title")} | ${meta.title}`} description={meta.description} />
 
-            );
-          })}
+      <header className="page-head">
+        <div className="wrap">
+          <h1 className="page-title">{t("projects.title")}</h1>
+          <p className="page-lead">{t("projects.lead")}</p>
         </div>
-      </Container>
-    </HelmetProvider>
+      </header>
+
+      <section className="section section--tight">
+        <div className="wrap">
+          <h2 className="h2">{t("projects.recentTitle")}</h2>
+          <div className="cases">
+            {recent.map((p) => (
+              <article key={p.id} id={p.id} className="case">
+                <figure className="case__media">
+                  <img src={p.cover} alt="" loading="lazy" />
+                  <figcaption>{t("projects.illustration")}</figcaption>
+                </figure>
+                <div className="case__body">
+                  <p className="case__context">{p.context}</p>
+                  <h3 className="case__title">{p.title}</h3>
+                  <p className="case__summary">{p.summary}</p>
+                  <h4 className="case__label">{t("projects.role")}</h4>
+                  <ul className="dash-list">
+                    {p.role.map((r) => <li key={r}>{r}</li>)}
+                  </ul>
+                  <div className="case__outcome">
+                    <h4 className="case__label">{t("projects.outcome")}</h4>
+                    <p>{p.outcome}</p>
+                  </div>
+                  <ul className="tags" aria-label="Tags">
+                    {p.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                  </ul>
+                  {(p.gallery || p.video) && (
+                    <div className="actions actions--small">
+                      {p.gallery ? (
+                        <button type="button" className="btn btn--ghost btn--sm" onClick={() => openGallery(p.gallery, p.title)}>
+                          {t("projects.gallery")}
+                        </button>
+                      ) : null}
+                      {p.video ? (
+                        <a className="btn btn--ghost btn--sm" href={p.video} target="_blank" rel="noreferrer">{t("projects.video")}</a>
+                      ) : null}
+                    </div>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--mist">
+        <div className="wrap">
+          <div className="section__head section__head--stack">
+            <h2 className="h2">{t("projects.archiveTitle")}</h2>
+            <p>{t("projects.archiveLead")}</p>
+          </div>
+          <div className="archive">
+            {archive.map((a) => (
+              <article key={a.title} className="archive__item">
+                <button type="button" className="archive__thumb" onClick={() => openGallery(a.gallery, a.title)} aria-label={`${t("projects.gallery")} : ${a.title}`}>
+                  <img src={a.img} alt="" loading="lazy" />
+                </button>
+                <h3 className="archive__title">{a.title}</h3>
+                <p className="archive__context">{a.context}</p>
+                {a.link ? (
+                  <a className="text-link" href={a.link} target="_blank" rel="noreferrer">
+                    {isVideo(a.link) ? t("projects.video") : t("projects.link")}
+                  </a>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {box ? (
+        <Lightbox
+          images={box.images}
+          index={box.index}
+          title={box.title}
+          onClose={() => setBox(null)}
+          onIndex={(i) => setBox((b) => ({ ...b, index: i }))}
+        />
+      ) : null}
+    </>
   );
 };

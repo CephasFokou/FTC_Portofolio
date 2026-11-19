@@ -19,9 +19,6 @@ const getInitialLang = () => {
   } catch {
     // ignore
   }
-  if (typeof navigator !== "undefined") {
-    return normalizeLang(navigator.language);
-  }
   return "fr";
 };
 

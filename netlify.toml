@@ -1,0 +1,10 @@
+[build]
+  command = "yarn build"
+  publish = "build"
+
+# Application monopage : toutes les routes renvoient vers index.html.
+# Les fichiers statiques existants (ex. /mla/) restent servis tels quels.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

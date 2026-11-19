@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Public Sans, Arial, sans-serif">
+<rect width="1200" height="800" fill="#141414"/>
+<g transform="translate(110 90)"><rect width="300" height="620" rx="36" fill="#0A0A0A" stroke="#3A3A3A" stroke-width="3"/>
+<text x="150" y="80" fill="#C9A027" font-family="Georgia, serif" font-size="28" text-anchor="middle">Brunch</text><text x="150" y="112" fill="#C9A027" font-family="Georgia, serif" font-size="18" text-anchor="middle" font-style="italic">with Péniel</text>
+<rect x="28" y="150" width="244" height="150" rx="10" fill="#1E1E1E"/><circle cx="150" cy="225" r="46" fill="none" stroke="#C9A027" stroke-width="3"/><circle cx="150" cy="225" r="30" fill="#2A2A2A"/>
+<text x="28" y="340" fill="#FFFFFF" font-size="18">Formule signature</text><text x="28" y="368" fill="#A0A0A0" font-size="15">2 personnes · dimanche</text>
+<g font-size="15" text-anchor="middle"><rect x="28" y="400" width="70" height="46" rx="6" fill="#1E1E1E"/><text x="63" y="429" fill="#A0A0A0">10h</text><rect x="115" y="400" width="70" height="46" rx="6" fill="#C9A027"/><text x="150" y="429" fill="#0A0A0A" font-weight="700">11h</text><rect x="202" y="400" width="70" height="46" rx="6" fill="#1E1E1E"/><text x="237" y="429" fill="#A0A0A0">12h</text></g>
+<rect x="28" y="530" width="244" height="52" rx="26" fill="#C9A027"/><text x="150" y="562" fill="#0A0A0A" font-size="17" font-weight="700" text-anchor="middle">Réserver</text></g>
+<g font-size="20" fill="#FFFFFF"><text x="520" y="170" font-size="32" font-weight="700">Réserver, payer, confirmer</text>
+<g transform="translate(520 220)"><rect width="560" height="80" rx="8" fill="#1E1E1E"/><text x="28" y="50">Catalogue des formules</text></g>
+<g transform="translate(520 320)"><rect width="560" height="80" rx="8" fill="#1E1E1E"/><text x="28" y="50">Réservation de créneau</text></g>
+<g transform="translate(520 420)"><rect width="560" height="80" rx="8" fill="#1E1E1E" stroke="#C9A027"/><text x="28" y="50" fill="#C9A027">Paiement Supra Pay</text></g>
+<g transform="translate(520 520)"><rect width="560" height="80" rx="8" fill="#1E1E1E"/><text x="28" y="50">Confirmation et notifications</text></g>
+<text x="520" y="670" fill="#A0A0A0" font-size="17">React · Vite · Tailwind · Supabase</text></g>
+</svg>

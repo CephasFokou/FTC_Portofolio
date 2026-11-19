@@ -1,33 +1,50 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  useLocation,
-} from "react-router-dom";
-import withRouter from "../hooks/withRouter";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import AppRoutes from "./routes";
-import Headermain from "../header";
-import "./App.css";
+import Header from "../header";
+import Footer from "../components/footer";
 import { LanguageProvider } from "../context/language";
+import { useTranslation } from "../i18n/useTranslation";
 
-function _ScrollToTop(props) {
-  const { pathname } = useLocation();
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView();
+        return;
+      }
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
-  return props.children;
+  }, [pathname, hash]);
+  return null;
 }
-const ScrollToTop = withRouter(_ScrollToTop);
+
+function Shell() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <a className="skip-link" href="#main">{t("nav.skip")}</a>
+      <ScrollToTop />
+      <Header />
+      <main id="main" tabIndex="-1">
+        <AppRoutes />
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <Router basename={process.env.PUBLIC_URL}>
-        <ScrollToTop>
-          <Headermain />
-          <AppRoutes />
-        </ScrollToTop>
-      </Router>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <Router basename={process.env.PUBLIC_URL}>
+          <Shell />
+        </Router>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
