@@ -30,7 +30,7 @@ import pkfrc from "./assets/images/template homepage PKFREC Website.jpg";
 import fodec from "./assets/images/1- FODEC WireFrame - Accueil.jpg";
 import fodec0 from "./assets/images/0- FODEC WireFrame IMAGE.jpg";
 
-import cvFile from "./assets/Cephas_Fokou_CV_5.pdf";
+import cvFile from "./assets/CV_Cephas_Fokou_2026.pdf";
 
 const logotext = "Cephas Fokou";
 
